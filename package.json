@@ -1,5 +1,5 @@
 {
-  "main": "index.ts",
+  "main": "api/index.js",
   "scripts": {
     "start": "node api/index.js",
     "dev": "nodemon src/index.ts",
