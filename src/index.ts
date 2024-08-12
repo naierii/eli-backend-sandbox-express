@@ -25,6 +25,7 @@ async function start() {
 
     // Routes
 
+    app.use('/', require('./home-test/home-test.route'));
     app.use('/stage-girls', require('./stage-girls/stage-girls.route'));
     app.use('/todo', require('./todo/todo.route'));
 
