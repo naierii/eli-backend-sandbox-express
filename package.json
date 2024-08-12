@@ -1,7 +1,7 @@
 {
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node dist/index.ts",
+    "start": "node api/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc"
   },
