@@ -7,7 +7,7 @@
     "removeComments": true,
     "sourceMap": false,
     
-    "outDir": "./api",
+    "outDir": "./functions",
     "rootDir": "./src",
     "resolveJsonModule": true,
 
@@ -16,7 +16,7 @@
 
     "strict": false,
   },
-  "include": ["src"],
+  "include": ["src", "src/custom.d.ts"],
   "exclude": ["node_modules", "dist/*", "src/static"],
   "lib": ["es6"]
 }

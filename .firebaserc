@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "eli-sandbox-express-api"
+  },
+  "targets": {},
+  "etags": {
+    "eli-sandbox-express-api": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}

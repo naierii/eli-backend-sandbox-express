@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import { ObjectId } from 'mongodb';
 
-export const createTodo =  async function(req: Request, res: Response) {
+export const createTodo =  async function(req, res) {
   try {
     const { db } = req.app;
 
@@ -39,7 +39,7 @@ export const createTodo =  async function(req: Request, res: Response) {
   }
 }
 
-export const updateTodo = async function(req: Request, res: Response) {
+export const updateTodo = async function(req, res) {
   try {
     const { db } = req.app;
 
@@ -73,7 +73,7 @@ export const updateTodo = async function(req: Request, res: Response) {
   }
 }
 
-export const getTodos = async function(req: Request, res: Response) {
+export const getTodos = async function(req, res) {
   try {
     const { db } = req.app;
     const { user } = req.query;
@@ -92,7 +92,7 @@ export const getTodos = async function(req: Request, res: Response) {
     res.status(500).json({ error: error.toString() });
   }
 }
-export const getTodo = async function(req: Request, res: Response) {
+export const getTodo = async function(req, res) {
   try {
     const { db } = req.app;
 
@@ -108,7 +108,7 @@ export const getTodo = async function(req: Request, res: Response) {
   }
 }
 
-export const deleteTodo = async function(req: Request, res: Response) {
+export const deleteTodo = async function(req, res) {
   try {
     const { db } = req.app;
 
