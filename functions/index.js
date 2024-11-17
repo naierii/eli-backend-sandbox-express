@@ -39,15 +39,19 @@ const mongodb_1 = require("mongodb");
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
+const dotenv = __importStar(require("dotenv"));
 const functions = __importStar(require("firebase-functions"));
+require("./types/express-request");
+dotenv.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     origin: '*'
 }));
 app.use(body_parser_1.default.json());
-app.use('/', require('./home-test/home-test.route'));
-app.use('/stage-girls', require('./stage-girls/stage-girls.route'));
-app.use('/todo', require('./todo/todo.route'));
+app.use('/', require('./api/home-test/home-test.route'));
+app.use('/login', require('./api/login/login.route'));
+app.use('/stage-girls', require('./api/stage-girls/stage-girls.route'));
+app.use('/todo', require('./api/todo/todo.route'));
 function start() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -69,3 +73,4 @@ function start() {
 }
 start();
 exports.api = functions.https.onRequest(app);
+//# sourceMappingURL=index.js.map

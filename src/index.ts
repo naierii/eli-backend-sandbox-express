@@ -2,8 +2,13 @@ import { MongoClient } from 'mongodb';
 import express from 'express';
 import body from 'body-parser';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
 
 import * as functions from 'firebase-functions';
+
+import './types/express-request';
+
+dotenv.config();
 
 const app = express();
 
@@ -15,9 +20,10 @@ app.use(cors({
 app.use(body.json());
 
 // Routes
-app.use('/', require('./home-test/home-test.route'));
-app.use('/stage-girls', require('./stage-girls/stage-girls.route'));
-app.use('/todo', require('./todo/todo.route'));
+app.use('/', require('./api/home-test/home-test.route'));
+app.use('/login', require('./api/login/login.route'));
+app.use('/stage-girls', require('./api/stage-girls/stage-girls.route'));
+app.use('/todo', require('./api/todo/todo.route'));
 
 async function start() {
   try {

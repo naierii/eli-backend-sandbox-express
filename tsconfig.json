@@ -5,7 +5,7 @@
     "target": "es6",
     "moduleResolution": "node",
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": true,
     
     "outDir": "./functions",
     "rootDir": "./src",
@@ -16,7 +16,7 @@
 
     "strict": false,
   },
-  "include": ["src", "src/custom.d.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist/*", "src/static"],
-  "lib": ["es6"]
+  "lib": ["es6"],
 }
